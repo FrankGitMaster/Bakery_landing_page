@@ -100,6 +100,7 @@ header p:last-child{
 }
 .about_us aside{
     flex: 1;
+    text-align: center;
 }
 .about_us article{
     flex: 2;

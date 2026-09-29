@@ -142,7 +142,7 @@ header p:last-child{
     font-size: 0.875rem;
     cursor: pointer;
 }
-@media screen and (max-width: 48rem){
+@media screen and (max-width: 50rem){
     #special_menu{
         display: flex;
     }
@@ -166,7 +166,7 @@ header p:last-child{
         width: 100%;
     }
 }
-@media screen and (max-width: 40rem){
+@media screen and (max-width: 37.5rem){
     .products,
     .about_us{
         flex-direction: column;

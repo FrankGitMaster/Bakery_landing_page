@@ -7,12 +7,16 @@
     font-family: "LiberationSans-Regular", Arial, Helvetica;
 }
 p{
-    font-size: 13px;
+    font-size: 1rem;
     line-height: 1.7;
 }
-h4,
 h3{
-    letter-spacing: 1px;
+    font-size: 1.5rem;
+    letter-spacing: 0.0625rem;
+}
+h4{
+    font-size: 1.25rem;
+    letter-spacing: 0.0625rem;
 }
 body{
     margin: 0;
@@ -27,7 +31,7 @@ main{
 .background_header_image{
     width: 100%;
     height: 80vh;
-    padding: 15px 10% 0;
+    padding: 0.9375rem 10% 0;
     background-color: lightblue;
     background-image: url("../imgs/header.jpg");
     background-repeat: no-repeat;
@@ -39,56 +43,59 @@ main{
     color: #fff;
     text-transform: uppercase;
     margin: 0;
+    font-size: 1rem;
 }
 header{
     width: 80%;
     background-color: #fff;
     text-align: center;
-    padding: 30px;
+    padding: 1.875rem;
     position: absolute;
-    bottom: calc(0% - 72.5px);
+    bottom: 0;
+    transform: translateY(50%);
 }
 header p:first-child{
     color: #28d3db;
-    font-size: 50px;
+    font-size: clamp(1.75rem, 5vw, 3.125rem);
     font-weight: 600;
-    margin: 0 0 10px;
-    letter-spacing: 2px;
+    line-height: 1.2;
+    margin: 0 0 0.625rem;
+    letter-spacing: 0.125rem;
 }
 header p:last-child{
-    font-size: 13px;
+    font-size: 1rem;
     margin: 0;
 }
 #first_section{
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 72.5px 10% 50px;
+    padding: 5rem 10% 3.125rem;
     background: linear-gradient(#aed8ff,#fdeaf4);
 }
 .products,
 .about_us{
     display: flex;
     flex-wrap: wrap;
-    margin: 20px 0 0;
+    margin: 1.25rem 0 0;
     flex-direction: row;
 }
 .products article{
     background-color: #fff;
     flex: 1;
     margin: 0;
-    padding: 30px 20px;
+    padding: 1.875rem 1.25rem;
     text-align: center;
 }
 .products article:nth-child(2){
-    margin: 0 20px;
+    margin: 0 1.25rem;
 }
 .products article .product_icon{
-    width: 50px;
+    width: 3.125rem;
 }
 .about_us{
     background-color: #fff;
-    padding: 30px 20px;
+    padding: 1.875rem 1.25rem;
     align-items: center;
 }
 .about_us aside{
@@ -100,7 +107,7 @@ header p:last-child{
 #special_menu{
     width: 100%;
     background-color: #e8f2e4;
-    padding: 50px 10%;
+    padding: 3.125rem 10%;
     position: relative;
 }
 #special_menu img{
@@ -108,13 +115,14 @@ header p:last-child{
 }
 .special_menu{
     width: 30%;
-    min-width: 350px;
-    border: solid 5px #aed8ff;
-    padding: 20px;
+    min-width: 21.875rem;
+    border: solid 0.3125rem #aed8ff;
+    padding: 1.25rem;
     background-color: #fff;
     position: absolute;
     right: 10%;
-    top: calc(50% - 99px);
+    top: 50%;
+    transform: translateY(-50%);
 }
 .special_menu h3{
     color: #aed8ff;
@@ -122,18 +130,18 @@ header p:last-child{
 }
 .special_menu hr{
     width: 10%;
-    border: solid 1px #aed8ff;
-    margin: 20px 0;
+    border: solid 0.0625rem #aed8ff;
+    margin: 1.25rem 0;
 }
 .special_menu button{
-    border: solid 1px #aed8ff;
+    border: solid 0.0625rem #aed8ff;
     text-transform: uppercase;
     background-color: #fff;
-    padding: 5px 15px;
-    font-size: 13px;
+    padding: 0.3125rem 0.9375rem;
+    font-size: 0.875rem;
     cursor: pointer;
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 50rem){
     #special_menu{
         display: flex;
     }
@@ -144,8 +152,10 @@ header p:last-child{
     .special_menu{
         width: 40%;
         min-width: auto;
-        position: inherit;
+        position: static;
         right: 0;
+        top: auto;
+        transform: none;
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -155,10 +165,7 @@ header p:last-child{
         width: 100%;
     }
 }
-@media screen and (max-width: 600px){
-    header p:first-child{
-        font-size: 40px;
-    }
+@media screen and (max-width: 37.5rem){
     .products,
     .about_us{
         flex-direction: column;
@@ -167,7 +174,7 @@ header p:last-child{
         margin: 0;
     }
     .products article{
-        margin: 20px 0;
+        margin: 1.25rem 0;
     }
     #special_menu{
         flex-direction: column;
